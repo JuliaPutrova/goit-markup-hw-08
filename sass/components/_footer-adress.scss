@@ -1,0 +1,41 @@
+.adress__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.apeal__title {
+  font-family: var(--main-font);
+  @include title(14px, 700, 16px);
+
+  /*font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;*/
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer-social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.contact-adress {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+}
+
+.contact-info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,16 @@
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--accent-title-color);
+
+  .team & {
+    margin-bottom: var(--section-padding-bottom);
+  }
+
+  .work & {
+    margin-bottom: var(--section-padding-bottom);
+  }
+}

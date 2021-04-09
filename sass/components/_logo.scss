@@ -1,0 +1,21 @@
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.location {
+  margin-right: 70px;
+}
+
+.logo {
+  font-family: var(--secondary-font);
+  @include font(26px, 700, 31px);
+  color: var(--accent-color);
+
+  &--theme-dark {
+    color: #000000;
+  }
+
+  &--theme-light {
+    color: var(--primary-white-color);
+  }
+}

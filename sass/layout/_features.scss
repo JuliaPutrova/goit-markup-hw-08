@@ -1,0 +1,50 @@
+.features__list {
+  display: flex;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.features__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.features__title {
+  @include title(14px, 700, 16px);
+  /*font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;*/
+  text-transform: uppercase;
+  color: var(--accent-title-color);
+  margin-bottom: 10px;
+}
+
+.features__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--accent-text-color);
+}
+
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.features__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+}
+
+.features__icon {
+  width: 70px;
+  height: 70px;
+}

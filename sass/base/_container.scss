@@ -1,0 +1,49 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+
+  .header & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: 1px solid red;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+// .container {
+//   width: 1200px;
+//   margin: 0 auto;
+//   padding-left: 15px;
+//   padding-right: 15px;
+
+//   .filter-projects & {
+//     align-items: center;
+//   }
+
+//   .header & {
+//     display: flex;
+//     align-items: center;
+//     margin-left: auto;
+//   }
+// }
