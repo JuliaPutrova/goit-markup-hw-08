@@ -5,6 +5,7 @@
 
 .client__list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
 }
@@ -12,9 +13,18 @@
 .client__item {
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc(100% / 6 - 30px);
   height: 90px;
   border: 1px solid #afb1b8;
+
+  @media screen and (min-width: 480px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - 30px);
+  }
 }
 
 .client__link {

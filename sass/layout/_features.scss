@@ -1,24 +1,93 @@
+// .features__container {
+//   margin-top: 60px;
+// }
+
+// .features__title {
+//   font-family: var(--main-font);
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 16px;
+//   text-align: center;
+//   letter-spacing: 0.03em;
+//   text-transform: uppercase;
+
+//   color: var(--accent-title-color);
+//   margin-bottom: 10px;
+// }
+
+// .features__description {
+//   font-family: var(--main-font);
+//   font-weight: 400;
+//   font-size: 14px;
+//   line-height: 24px;
+//   letter-spacing: 0.03em;
+//   color: var(--accent-text-color);
+
+//   margin-bottom: 30px;
+// }
+
+// .features__card {
+//   // display: flex;
+//   // align-items: center;
+//   // justify-content: center;
+//   width: 450px;
+//   height: 120px;
+//   margin-bottom: 30px;
+//   background-color: var(--secondary-background-color);
+// }
+
+// @media screen and (min-width: 768px) {
+//   .features__list {
+//     display: flex;
+//     margin-left: -30px;
+//     margin-top: -30px;
+//   }
+
+//   .features__item {
+//     margin-left: 30px;
+//     margin-top: 30px;
+//     flex-basis: calc(100% / 2 - 30px);
+//   }
+// }
+
 .features__list {
-  display: flex;
   margin-left: -30px;
   margin-top: -30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.features__description:last-child {
+  margin-bottom: 0;
 }
 
 .features__item {
   margin-left: 30px;
   margin-top: 30px;
-  flex-basis: calc(100% / 4 - 30px);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
 }
 
 .features__title {
   @include title(14px, 700, 16px);
-  /*font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;*/
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-title-color);
   margin-bottom: 10px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
 
 .features__description {
@@ -38,7 +107,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: var(--secondary-background-color);
