@@ -191,13 +191,12 @@
   position: relative;
   display: inline;
   color: var(--accent-color);
-  padding-bottom: 34px;
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -32px;
 
     width: 100%;
     height: 4px;
