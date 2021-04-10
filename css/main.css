@@ -75,7 +75,6 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -143,11 +142,20 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 32px;
-  padding-left: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 74px;
+  padding-left: 74px;
+}
+
+@media screen and (min-width: 1200px) {
+  .social {
+    padding-right: 32px;
+    padding-left: 32px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .social__link {
@@ -219,6 +227,8 @@ img {
     transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    z-index: 1;
   }
   .mobile-menu__close-button {
     position: absolute;
@@ -231,12 +241,13 @@ img {
   .is-open {
     -webkit-transform: translateY(0) translateX(-50%);
             transform: translateY(0) translateX(-50%);
+    opacity: 1;
   }
   .mobile-menu__link {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 40px;
-    line-height: 47px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--accent-title-color);
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -257,7 +268,7 @@ img {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 34px;
-    line-height: 40px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -267,7 +278,7 @@ img {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
   }
@@ -290,7 +301,7 @@ img {
     font-family: var(--main-font);
     font-weight: 500;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--accent-color);
   }
@@ -583,7 +594,7 @@ img {
   color: var(--primary-white-color);
 }
 
-.adress__item:not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -627,7 +638,7 @@ img {
   }
 }
 
-.contact-adress {
+.contact-address {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.71;
@@ -808,7 +819,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #ffffff;
+  background: var(--primary-white-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(240, 81, 81, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(240, 81, 81, 0.2);
   border-radius: 4px;
@@ -1095,9 +1106,10 @@ img {
 
 .hero__title {
   font-family: var(--main-font);
-  font-weight: 900;
   font-size: 26px;
-  line-height: 42px;
+  font-weight: 900;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
   max-width: 360px;
   margin: 0 auto;
   text-align: center;
@@ -1176,10 +1188,6 @@ img {
   }
 }
 
-.features__description:last-child {
-  margin-bottom: 0;
-}
-
 .features__item {
   margin-left: 30px;
   margin-top: 30px;
@@ -1204,9 +1212,6 @@ img {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-title-color);
   margin-bottom: 10px;
@@ -1227,9 +1232,20 @@ img {
   color: var(--accent-text-color);
 }
 
+.features__description:last-child {
+  margin-bottom: 0;
+}
+
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__card {
@@ -1297,6 +1313,19 @@ img {
   }
 }
 
+.team {
+  background-color: var(--secondary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 95px;
+    padding-bottom: 95px;
+  }
+}
+
 .team__name {
   font-weight: 500;
   font-size: 16px;
@@ -1307,10 +1336,23 @@ img {
   margin-bottom: 9px;
 }
 
-.team {
-  background-color: var(--secondary-background-color);
-  padding-top: 95px;
-  padding-bottom: 95px;
+.team__position {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--accent-text-color);
+  margin-bottom: 16px;
+}
+
+.team__card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team__list {
@@ -1347,28 +1389,16 @@ img {
   }
 }
 
-.team__card {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team__position {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--accent-text-color);
-  margin-bottom: 16px;
-}
-
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .client__list {
