@@ -109,10 +109,6 @@ img {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  /*font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -778,12 +774,24 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   background: #ffffff;
-  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(240, 81, 81, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(240, 81, 81, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-btn {
@@ -915,11 +923,23 @@ img {
           align-items: center;
   font-family: var(--main-font);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal__label-check {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__label-check {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal__label-check::before {
@@ -966,6 +986,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 200px;
+  height: 50px;
+  margin: 0 auto;
   padding: 10px 55px;
   text-align: center;
   font-family: var(--main-font);
@@ -973,11 +996,6 @@ img {
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  /*font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;*/
-  margin: 0 auto;
   color: #ffffff;
   background: var(--accent-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
