@@ -8,6 +8,11 @@
   margin-bottom: 30px;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
+
+  @media screen and (min-width: 768px) {
+    @include title(44px, 900, 60px, 0.06em);
+    max-width: 696px;
+  }
 }
 
 .hero {
